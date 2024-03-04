@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "48037111714a1812a25a52ae26d1be1b"
+name = "quiz-payment-methods"
+application_url = "https://beginning-commonly-split-prefer.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quiz-dev-liam-ball.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_payment_customizations,write_payment_customizations,write_products"
+
+[auth]
+redirect_urls = [
+  "https://beginning-commonly-split-prefer.trycloudflare.com/auth/callback",
+  "https://beginning-commonly-split-prefer.trycloudflare.com/auth/shopify/callback",
+  "https://beginning-commonly-split-prefer.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
